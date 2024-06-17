@@ -1,77 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <!-- Font Awesome - Ícones -->
-    <script src="https://kit.fontawesome.com/fe535cfee5.js" crossorigin="anonymous"></script>
-    <!-- Estilo customizado -->
-    <link rel="stylesheet" href="estilo.css">
-    <!-- Titulo -->
-    <title>Crazy Cat Gang</title>
-    <!-- Ícone do LINK - Aba do site -->
-    <link rel="icon" href="fotos/logo_redonda.png" type="fotos/png">
-    <script src="app.js"></script>
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="main.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <!-- Font Awesome - Ícones -->
+        <script src="https://kit.fontawesome.com/fe535cfee5.js" crossorigin="anonymous"></script>
+        <!-- Estilo customizado -->
+        <link rel="stylesheet" href="estilo.css">
+        <!-- Titulo -->
+        <title>Crazy Cat Gang</title>
+        <!-- Ícone do LINK - Aba do site -->
+        <link rel="icon" href="fotos/logo_redonda.png" type="fotos/png">
+        <style>
+            @media(min-width: 768px){
+                .linha_LP{
+                    border-bottom: 1px solid #343a40;
+                    }
+            }
+        </style>
+    </head>
+<body class="bg-body">
     <!-- Inicio da Header - Menu superior inicial -->
-    <header class="bg-warning sticky-top">
-        <nav class="navbar navbar-expand-md navbar-light bg-warning">
-            <div class="container">
-    
-                <!-- Logo -->
-                <a class="navbar-brand" href="index.html">
-                    <img src="fotos/logo_sf.png" width="50">
-                </a>
-    
-                <!-- Botão toggler -->
-                <button class="navbar-toggler" data-toggle="collapse" data-target="#nav-principal">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-    
-                <!-- Links -->
-                <div class="collapse navbar-collapse" id="nav-principal">
-                    <ul class="navbar-nav ml-auto mr-2">
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.html">Quem somos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.html">Como Ajudar</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="voluntario.html">Lar temporário</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="categoriasDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Categorias
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="categoriasDropdown">
-                                <a class="dropdown-item" href="#">Adoção</a>
-                                <a class="dropdown-item" href="#">Comportamento</a>
-                                <a class="dropdown-item" href="#">Food</a>
-                                <a class="dropdown-item" href="#">Indicação</a>
-                                <a class="dropdown-item" href="#">Parceria</a>
-                                <a class="dropdown-item" href="#">Resgate</a>
-                                <a class="dropdown-item" href="#">Trabalho</a>
-                            </div>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="">Blog</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="faq.html">Perguntas Frequentes</a>
-                        </li>
-                    </ul>
-                    <!-- Botão Entrar -->
-                    <button class="btn btn-outline-dark">
-                        Seja voluntário <i class="fa-solid fa-cat"></i>
-                    </button>
-                </div>
+    <header class="sticky-top" id="cabecalho">
+        <div class="container-header container-f">
+            <div class=" header sticky-top">
+                <nav class="" id="menu-navegacao">
+                    <div class="container-f">
+                        <a id="header-img" href="index.html">
+                            <img class="d-none d-lg-flex align-items-center" src="./fotos/logo_sf.png" alt="">
+                        </a>
+                        <ul class="container-f nav d-block d-md-flex">
+                            <li class=" fw-bold" >
+                                <a class="nav-link " href="index.html">
+                                    Quem Somos
+                                </a>
+                                <span id="span1"></span>
+                            </li>
+                            <li class=" fw-bold" >
+                                <a class="nav-link " href="index.html">
+                                    Como ajudar
+                                </a>
+                                <span id="span2"></span>
+                            </li>
+                            <li class="nav-item fw-bold">
+                                <a class="nav-link " href="voluntario.html">
+                                    Lar Temporário
+                                </a>
+                                <span></span>
+                            </li>
+                            <li class="nav-item fw-bold">
+                                <a class="nav-link dropdown-toggle" href="#" id="categoriasDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Categorias
+                                </a>
+                                <span></span>
+                                <div class="dropdown-menu" aria-labelledby="categoriasDropdown">
+                                    <a class="dropdown-item" href="#">Adoção</a>
+                                    <a class="dropdown-item" href="#">Comportamento</a>
+                                    <a class="dropdown-item" href="#">Food</a>
+                                    <a class="dropdown-item" href="#">Indicação</a>
+                                    <a class="dropdown-item" href="#">Parceria</a>
+                                    <a class="dropdown-item" href="#">Resgate</a>
+                                    <a class="dropdown-item" href="#">Trabalho</a>
+                                </div>
+                            </li>
+                            <li class="nav-item fw-bold">
+                                <a class="nav-link " href="#">
+                                    Blog
+                                </a>
+                                <span></span>
+                            </li>
+                            <li class="nav-item fw-bold">
+                                <a class="nav-link " href="faq.html">
+                                    Perguntas Frequêntes
+                                </a>
+                                <span></span>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
             </div>
-        </nav>
+            <div>
+                <a href="forms.html">
+                    <button class="fw-bold botao" id="voluntario">
+                        Seja Voluntário <i class="fa-solid fa-cat"></i>
+                    </button>
+                </a>
+            </div>
+        </div>
     </header>
 
     <!-- Texto pré Formulário -->
@@ -93,7 +112,7 @@
     </section>
 
     <!-- Formulário -->
-    <section>
+    <section class="bg-white">
         <div class="container">
             <div class="row">
                 
@@ -158,7 +177,7 @@
     </section>
 
     <!-- Inicio do Footer - Rodapé -->
-    <footer class="mt-4 mb-4">
+    <footer class="pt-4 pb-4  bg-white">
         <div class="container">
             <div class="row">
                 <div class="col-md-8 col-sm-12 d-flex align-items-center">
@@ -171,10 +190,10 @@
                     </p>
                 </div>
                 <div class="col-md-4 d-flex justify-content-center">
-                    <a href="#" class="btn btn-outline-dark ml-1">
+                    <a href="https://www.instagram.com/crazycatgang?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="btn btn-outline-dark ml-1">
                         <i class="fa-brands fa-instagram fa-md"></i>
                     </a>
-                    <a href="#" class="btn btn-outline-dark ml-1">
+                    <a href="https://www.facebook.com/crazycatgang" class="btn btn-outline-dark ml-1">
                         <i class="fa-brands fa-facebook fa-md"></i>
                     </a>
                     <a href="#" class="btn btn-outline-dark ml-1">
@@ -196,6 +215,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
     integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
     crossorigin="anonymous"></script>
+    <script src="app.js"></script>
 
 </body>
 </html>
