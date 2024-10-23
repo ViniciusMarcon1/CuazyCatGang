@@ -8,6 +8,10 @@
     display: none;
 }
 
+.main_area{
+    height: 605px;
+}
+
 .header {
     padding: 0px 16px;
     background-color: rgba(255, 255, 255, 0.6);
@@ -168,4 +172,191 @@ section {
     background-color: #fff;
     display: block;
     margin-bottom: 4px;
+}
+
+.section {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1.0s ease-out, transform 1.0s ease-out;
+}
+
+.section.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* CARDS  */
+
+.card_body{
+    min-height: 500px;
+    border: 0.5px solid #D4D4D4;
+    padding: 6px;
+    border-radius: 6px;
+}
+
+.card_img{
+    width: 100%;
+    height: 50%;
+    overflow: hidden;
+    border-radius: 4px;
+}
+
+.card_img img{
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+}
+
+.card_text_container{
+    padding-bottom: 15px;
+    padding-top: 15px;
+    min-height: 190px;
+}
+
+.card_text_container_voluntario{
+    padding-bottom: 15px;
+    padding-top: 15px;
+}
+
+.card_title{
+    /* font-size: 2.0em; */
+    font-weight: 550;
+}
+
+.card_sub_text{
+    font-weight: 400;
+    font-size: 0.9em;
+}
+
+.card_sub_text ul{
+    padding-left: 20px;
+}
+
+.arrumar_btn{
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    align-items: end;
+    justify-content: end;
+}
+
+.card_btn{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 6px;
+    background-color: white;
+    border: 1.2px solid #f6b323;
+    color: #f6b323;
+    transition: 0.2s;
+    font-size: 1.0009em;
+    font-weight: 500;
+}
+
+.card_btn:hover{
+    background-color: #f6b323;
+    border: 1.2px solid #f6b323;
+    color: #343A40;
+}
+
+
+/* Botão prinpal do meio do site */
+
+/* From Uiverse.io by vinodjangid07 ---- Com modificações */ 
+.input-wrapper {
+    width: 100%;
+    height: 50px;
+    border-radius: 8px;
+    padding: 5px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+}
+
+.icon {
+    width: 30px;
+    fill: #343A40;
+    margin-left: 8px;
+    transition: all 0.3s;
+}
+.input {
+    flex-grow: 1; /* Faz com que o input ocupe todo o espaço disponível */
+    height: 100%;
+    border: none;
+    outline: none;
+    padding-left: 15px;
+    background-color: #ffffff;
+    color: black;
+    font-size: 1em;
+}
+.input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px #343A40 inset;
+    -webkit-text-fill-color: #343A40;
+}
+.Subscribe-btn {
+    height: 100%;
+    width: 160px;
+    border: none;
+    border-radius: 5px;
+    color: #ffffff;
+    cursor: pointer;
+    /* background-color: #343A40; */
+    background: linear-gradient( 300deg,#f09819,
+    #ff512f);
+    font-weight: 500;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto; /* Empurra o botão para o canto direito */
+    position: relative;
+    transition: all 0.3s;
+}
+.arrow {
+    position: absolute;
+    margin-right: 210px;
+    transition: all 0.3s;
+    fill: #ffffff;
+}
+.input-wrapper:active .icon {
+    transform: scale(1.3);
+}
+.Subscribe-btn:hover {
+    color: #343a4000;
+}
+.Subscribe-btn:hover .arrow {
+    margin-right: 0;
+    animation: jello-vertical 0.9s both;
+    transform-origin: right;
+}
+
+@keyframes jello-vertical {
+0% {
+    transform: scale3d(1, 1, 1);
+}
+30% {
+    transform: scale3d(0.75, 1.25, 1);
+}
+40% {
+    transform: scale3d(1.25, 0.75, 1);
+}
+50% {
+    transform: scale3d(0.85, 1.15, 1);
+}
+65% {
+    transform: scale3d(1.05, 0.95, 1);
+}
+75% {
+    transform: scale3d(0.95, 1.05, 1);
+}
+100% {
+    transform: scale3d(1, 1, 1);
+}
+}
+.Subscribe-btn:active {
+transform: scale(0.9);
 }

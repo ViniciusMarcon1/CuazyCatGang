@@ -54,10 +54,10 @@ function verificarTamanhoDaJanela() {
                 <div class='collapse navbar-collapse' id='nav-principal'>
                     <ul class='navbar-nav ml-auto mr-2'>
                         <li class='nav-item'>
-                            <a class='nav-link' href='#about'>Quem somos</a>
+                            <a class='nav-link' href='#about' id="link-about">Quem somos</a>
                         </li>
                         <li class='nav-item'>
-                            <a class='nav-link' href='#how-help'>Como Ajudar</a>
+                            <a class='nav-link' href='#how-help' id="link-how-help">Como Ajudar</a>
                         </li>
                         <li class='nav-item'>
                             <a class='nav-link' href='voluntario.html'>Lar temporário</a>
@@ -103,13 +103,13 @@ function verificarTamanhoDaJanela() {
                         </a>
                         <ul class="container-f nav d-block d-md-flex">
                             <li class=" fw-bold" >
-                                <a class="nav-link " href="#about">
+                                <a class="nav-link " href="#about" id="link-about">
                                     Quem Somos
                                 </a>
                                 <span id="span1"></span>
                             </li>
                             <li class=" fw-bold" >
-                                <a class="nav-link " href="#how-help">
+                                <a class="nav-link " href="#how-help" id="link-how-help">
                                     Como ajudar
                                 </a>
                                 <span id="span2"></span>
@@ -171,5 +171,55 @@ verificarTamanhoDaJanela();
 
 
 
-function subir(){
-    $(window).scrollTop(0);}
+function subir() {
+    window.scrollTo({top: 0, behavior: 'smooth'});
+}
+
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    const sections = document.querySelectorAll(".section");
+
+    function revealSections() {
+        for (let i = 0; i < sections.length; i++) {
+            const windowHeight = window.innerHeight;
+            const elementTop = sections[i].getBoundingClientRect().top;
+            const elementVisible = 100; 
+
+            if (elementTop < windowHeight - elementVisible) {
+                sections[i].classList.add("active");
+            }
+        }
+    }
+
+    window.addEventListener("scroll", revealSections);
+    revealSections(); 
+});
+
+
+// Rolagem suave dos itens da nav bar no index.html
+document.addEventListener("DOMContentLoaded", function () {
+    // Função para rolar suavemente até a seção
+    function smoothScroll(link, sectionId) {
+        link.addEventListener("click", function (event) {
+            event.preventDefault(); // Impede o comportamento padrão do link
+            const section = document.querySelector(sectionId);
+
+            // Se a seção existir, faz o scroll suave
+            if (section) {
+                section.scrollIntoView({
+                    behavior: "smooth"
+                });
+            }
+        });
+    }
+
+    // Aplicando a função de rolagem suave para o link "Quem Somos"
+    const linkAbout = document.getElementById("link-about");
+    smoothScroll(linkAbout, "#about");
+
+    // Aplicando a função de rolagem suave para o link "Como Ajudar"
+    const linkHowHelp = document.getElementById("link-how-help");
+    smoothScroll(linkHowHelp, "#how-help");
+});
+
