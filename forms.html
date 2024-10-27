@@ -4,17 +4,19 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="main.css">
+        <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
         <!-- Font Awesome - Ícones -->
         <script src="https://kit.fontawesome.com/fe535cfee5.js" crossorigin="anonymous"></script>
         <!-- Estilo customizado -->
-        <link rel="stylesheet" href="estilo.css">
+        <link rel="stylesheet" href="css/estilo.css">
         <!-- Titulo -->
         <title>Crazy Cat Gang</title>
         <!-- Ícone do LINK - Aba do site -->
         <link rel="icon" href="fotos/logo_redonda.png" type="fotos/png">
+        <!-- Js para comunicação com o servidor -->
+         <script defer src="js/con.js"></script>
         <style>
             @media(min-width: 768px){
                 .linha_LP{
@@ -23,156 +25,151 @@
             }
         </style>
     </head>
-<body class="bg-body">
-    <!-- Inicio da Header - Menu superior inicial -->
+<body class="gradient-top">
     <header class="sticky-top" id="cabecalho">
         <div class="container-header container-f">
-            <div class=" header sticky-top">
-                <nav class="" id="menu-navegacao">
-                    <div class="container-f">
-                        <a id="header-img" href="index.html">
-                            <img class="d-none d-lg-flex align-items-center" src="./fotos/logo_sf.png" alt="">
-                        </a>
-                        <ul class="container-f nav d-block d-md-flex">
-                            <li class=" fw-bold" >
-                                <a class="nav-link " href="index.html">
-                                    Quem Somos
-                                </a>
-                                <span id="span1"></span>
-                            </li>
-                            <li class=" fw-bold" >
-                                <a class="nav-link " href="index.html">
-                                    Como ajudar
-                                </a>
-                                <span id="span2"></span>
-                            </li>
-                            <li class="nav-item fw-bold">
-                                <a class="nav-link " href="voluntario.html">
-                                    Lar Temporário
-                                </a>
-                                <span></span>
-                            </li>
-                            <li class="nav-item fw-bold">
-                                <a class="nav-link dropdown-toggle" href="#" id="categoriasDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Categorias
-                                </a>
-                                <span></span>
-                                <div class="dropdown-menu" aria-labelledby="categoriasDropdown">
-                                    <a class="dropdown-item" href="#">Adoção</a>
-                                    <a class="dropdown-item" href="#">Comportamento</a>
-                                    <a class="dropdown-item" href="#">Food</a>
-                                    <a class="dropdown-item" href="#">Indicação</a>
-                                    <a class="dropdown-item" href="#">Parceria</a>
-                                    <a class="dropdown-item" href="#">Resgate</a>
-                                    <a class="dropdown-item" href="#">Trabalho</a>
-                                </div>
-                            </li>
-                            <li class="nav-item fw-bold">
-                                <a class="nav-link " href="#">
-                                    Blog
-                                </a>
-                                <span></span>
-                            </li>
-                            <li class="nav-item fw-bold">
-                                <a class="nav-link " href="faq.html">
-                                    Perguntas Frequêntes
-                                </a>
-                                <span></span>
-                            </li>
-                        </ul>
-                    </div>
-                </nav>
-            </div>
-            <div>
-                <a href="forms.html">
-                    <button class="fw-bold botao" id="voluntario">
-                        Seja Voluntário <i class="fa-solid fa-cat"></i>
-                    </button>
-                </a>
-            </div>
+                <div class=" header sticky-top">
+                    <nav class="" id="menu-navegacao">
+                        <div class="container-f">
+                            <a id="header-img" href="index.html">
+                                <img class="d-none d-lg-flex align-items-center" src="./fotos/logo_sf.png" alt="">
+                            </a>
+                            <ul class="container-f nav d-block d-md-flex">
+                                <li class=" fw-bold" >
+                                    <a class="nav-link " href="#about" id="link-about">
+                                        Quem Somos
+                                    </a>
+                                    <span id="span1"></span>
+                                </li>
+                                <li class=" fw-bold" >
+                                    <a class="nav-link " href="#how-help" id="link-how-help">
+                                        Como ajudar
+                                    </a>
+                                    <span id="span2"></span>
+                                </li>
+                                <li class="nav-item fw-bold">
+                                    <a class="nav-link " href="voluntario.html">
+                                        Lar Temporário
+                                    </a>
+                                    <span></span>
+                                </li>
+                                <li class="nav-item fw-bold">
+                                    <a class="nav-link dropdown-toggle" href="#" id="categoriasDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Categorias
+                                    </a>
+                                    <span></span>
+                                    <div class="dropdown-menu" aria-labelledby="categoriasDropdown">
+                                        <a class="dropdown-item" href="#">Adoção</a>
+                                        <a class="dropdown-item" href="#">Comportamento</a>
+                                        <a class="dropdown-item" href="#">Food</a>
+                                        <a class="dropdown-item" href="#">Indicação</a>
+                                        <a class="dropdown-item" href="#">Parceria</a>
+                                        <a class="dropdown-item" href="#">Resgate</a>
+                                        <a class="dropdown-item" href="#">Trabalho</a>
+                                    </div>
+                                </li>
+                                <li class="nav-item fw-bold">
+                                    <a class="nav-link " href="#">
+                                        Blog
+                                    </a>
+                                    <span></span>
+                                </li>
+                                <li class="nav-item fw-bold">
+                                    <a class="nav-link " href="faq.html">
+                                        Perguntas Frequêntes
+                                    </a>
+                                    <span></span>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+                <div>
+                    <a href="forms.html">
+                        <button class="fw-bold botao" id="voluntario">
+                            Seja Voluntário <i class="fa-solid fa-cat"></i>
+                        </button>
+                    </a>
+                </div>
         </div>
     </header>
-
-    <!-- Texto pré Formulário -->
-    <section id="home" class="gradient-top-faq">
-        <div class="container section">
-            <div class="row">
-                <!-- Foto -->
-                <div class="col-md-6 d-none d-md-block">
-                    <img class="puxa_foto img-fluid" src="fotos/casinha.png" alt="Gatos abraçados">
-                </div>
-                <!-- Texto -->
-                <div class="col-md-6 d-flex">
-                    <div class="align-self-center text-dark">
-                        <h1 class="display-3">Formulário <i class="fa-solid fa-cat"></i></h1>
+    
+    <section class="container mb-5 mt-5 section">
+        <div class="form_main_card">
+                <div class="form_container">
+                    <div class="form_item_box">
+                        <h3 class="display-4 text-center">Voluntário Administrativo <i class="fa-solid fa-cat"></i></h3>
+                    </div>
+                    <div class="form_item_box p-4">
+                        <form id="form-voluntario-adm">
+                            <div class="form-group">
+                                <label>Nome completo</label>
+                                <input type="email" class="form-control" id="full_name" aria-describedby="fullname" placeholder="- Nome Sobrenome -">
+                              </div>
+                            <div class="form-group">
+                              <label>Endereço de email</label>
+                              <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="- Seu email -">
+                              <small id="emailHelp" class="form-text text-muted">Pode ficar tranquilo! Não vamos compartilhar seu email com ninguém.</small>
+                            </div>
+                            <div class="form-group">
+                              <label>Celular</label>
+                              <input type="number" class="form-control" id="celular" placeholder="- Seu celular -">
+                            </div>
+                            <div class="form-group">
+                                <label>CPF</label>
+                                <input type="number" class="form-control" id="celular" placeholder="- Seu CPF -">
+                              </div>
+                            <label>Sexo</label>
+                            <div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="gender" id="radioMasculino" value="masculino">
+                                    <label class="form-check-label" for="radioMasculino">Masculino</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="gender" id="radioFeminino" value="feminino">
+                                    <label class="form-check-label" for="radioFeminino">Feminino</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="gender" id="radioOutro" value="outro">
+                                    <label class="form-check-label" for="radioOutro">Outro</label>
+                                </div>
+                            </div>
+                            
+                            <div class="form-row mt-2">
+                                <div class="col">
+                                    <label for="inputEstado">Tem tela de proteção?</label>
+                                    <select id="inputEstado" class="form-control">
+                                      <option>Sim</option>
+                                      <option>Não</option>
+                                    </select>
+                                </div>
+                                <div class="col">
+                                    <label for="inputEstado">Tem outros pets?</label>
+                                    <select id="inputEstado" class="form-control">
+                                      <option>Sim</option>
+                                      <option>Não</option>
+                                    </select>
+                                </div>
+                              </div>
+                          </form>
+                          <div class="form_item_box d-flex justify-content-end align-items-center mt-4 pt-2 pb-2">
+                            <button class="animated-button">
+                                <svg viewBox="0 0 24 24" class="arr-2" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                    d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
+                                    ></path>
+                                </svg>
+                                <span onclick="gravar()" class="text">Enviar</span>
+                                <span class="circle"></span>
+                                <svg viewBox="0 0 24 24" class="arr-1" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                    d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
+                                    ></path>
+                                </svg>
+                            </button>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Formulário -->
-    <section class="bg-white">
-        <div class="container section">
-            <div class="row">
-                
-                <!-- Primeira coluna do forms -->
-                <div class="col-md-6 mt-3">
-                    <form action="">
-                        <div class="form-group">
-                            <label>Nome</label>
-                            <input class="form-control" placeholder=" - Seu primeiro nome - ">
-                        </div>
-                        <div class="form-group">
-                            <label>Sobrenome</label>
-                            <input class="form-control" placeholder=" - Seu sobrenome - ">
-                        </div>
-                        <div class="form-group">
-                            <label>Celular</label>
-                            <input class="form-control" placeholder=" - Seu número de celular - ">
-                        </div>
-                        <div class="form-group">
-                            <label>Email</label>
-                            <input class="form-control" placeholder=" - Seu e-mail - ">
-                        </div>
-                    </form>
-                </div>
-
-                <!-- Segunda coluna do forms -->
-                <div class="col-md-6 mt-3 mb-4">
-                    <form action="">
-                        <div class="form-group">
-                            <label>CPF</label>
-                            <input class="form-control" placeholder=" - Seu CPF - ">
-                        </div>
-                        <div class="form-group">
-                            <label for="moradia">Você mora em</label>
-                            <select class="form-control" id="moradia">
-                                <option value="">Casa</option>
-                                <option value="">Apartamento</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="moradia">Tem tela de proteção</label>
-                            <select class="form-control" id="moradia">
-                                <option value="">Sim</option>
-                                <option value="">Não</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="moradia">Tem outros gatos/pets?</label>
-                            <select class="form-control" id="moradia">
-                                <option value="">Sim</option>
-                                <option value="">Não</option>
-                            </select>
-                        </div> 
-                        <div class="d-flex justify-content-end mt-4">
-                            <button class="btn btn-warning">Enviar respostas</button>
-                        </div>
-                    </form>
-                </div>
-
-            </div>
         </div>
     </section>
 
@@ -215,7 +212,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
     integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
     crossorigin="anonymous"></script>
-    <script src="app.js"></script>
+    <script src="js/app.js"></script>
 
 </body>
 </html>

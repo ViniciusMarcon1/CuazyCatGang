@@ -141,9 +141,9 @@ section {
     background-color:rgba(255, 255, 255, 0.973);
 }
 
-.bg-body{
+/* .bg-body{
     background:#FFC107;
-}
+} */
 
 .bg-white {
     background-color: #fff;
@@ -192,6 +192,7 @@ section {
     border: 0.5px solid #D4D4D4;
     padding: 6px;
     border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .card_img{
