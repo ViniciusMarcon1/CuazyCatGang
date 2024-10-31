@@ -77,10 +77,10 @@ function verificarTamanhoDaJanela() {
                             </div>
                         </li>
                         <li class='nav-item'>
-                            <a class='nav-link' href=''>Blog</a>
+                            <a class='nav-link' href='faq.html'>Perguntas Frequentes</a>
                         </li>
                         <li class='nav-item'>
-                            <a class='nav-link' href='faq.html'>Perguntas Frequentes</a>
+                            <a class='nav-link' href='login.html'>Login</a>
                         </li>
                     </ul>
                     <!-- Botão Entrar -->
@@ -136,14 +136,14 @@ function verificarTamanhoDaJanela() {
                                 </div>
                             </li>
                             <li class="nav-item fw-bold">
-                                <a class="nav-link " href="#">
-                                    Blog
+                                <a class="nav-link " href="faq.html">
+                                    Perguntas Frequêntes
                                 </a>
                                 <span></span>
                             </li>
                             <li class="nav-item fw-bold">
-                                <a class="nav-link " href="faq.html">
-                                    Perguntas Frequêntes
+                                <a class="nav-link " href="login.html">
+                                    Login
                                 </a>
                                 <span></span>
                             </li>
