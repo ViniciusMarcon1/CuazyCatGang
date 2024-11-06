@@ -24,6 +24,7 @@
                     }
             }
         </style>
+        <script defer src="js/resgate.js"></script>
     </head>
 <body class="gradient-top">
     <header class="sticky-top" id="cabecalho">
@@ -104,20 +105,20 @@
                         <form id="form-voluntario-adm">
                             <div class="form-group">
                                 <label>Nome completo</label>
-                                <input type="email" class="form-control" id="full_name" aria-describedby="fullname" placeholder="- Nome Sobrenome -">
+                                <input type="text" class="form-control" id="full_name" name="fullname" placeholder="- Nome Sobrenome -">
                             </div>
                             <div class="form-group">
                                 <label>Celular</label>
-                                <input type="number" class="form-control" id="celular" placeholder="- Seu celular -">
+                                <input type="text" class="form-control" name="cell_colaborador" id="celular" placeholder="- Seu celular -">
                             </div>
                             <div class="form-group">
                                 <label>Localização do gatinho</label>
-                                <input type="text" class="form-control" id="endereco" placeholder="- Endereço -">
+                                <input type="text" class="form-control" id="endereco" name="localizacao" placeholder="- Endereço -">
                             </div>
 
                             <div class="form-group">
                                 <label>Caixa de Diálogo</label>
-                                <textarea type="" class="form-control" id="comentario" placeholder="- Deixe sua anotação para analizarmos aqui -"></textarea>
+                                <textarea type="" class="form-control" name="comentario" id="comentario" placeholder="- Deixe sua anotação para analizarmos aqui -"></textarea>
                             </div>
                             
                             <div class="form-row mt-2">
@@ -138,13 +139,13 @@
                                 </div>
                             </form>
                             <div class="form_item_box d-flex justify-content-end align-items-center mt-4 pt-2 pb-2">
-                            <button class="animated-button">
+                            <button onclick="enviar()" class="animated-button">
                                 <svg viewBox="0 0 24 24" class="arr-2" xmlns="http://www.w3.org/2000/svg">
                                     <path
                                     d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
                                     ></path>
                                 </svg>
-                                <span onclick="enviar()" class="text">Enviar</span>
+                                <span class="text">Enviar</span>
                                 <span class="circle"></span>
                                 <svg viewBox="0 0 24 24" class="arr-1" xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -160,12 +161,12 @@
 
     <section class="pedidos section">
         <h1>Pedidos feitos</h1>
-        <div class="container-pedidos">
-            <div class="card">
+        <div id="container-pedidos" class="container container-pedidos">
+            <!-- <div class="card">
                 <p><strong>Nome da Pessoa Aqui</strong></p>
                 <p>Aqui estou dizendo a situação que se encontra o gatinho e se ele esta comigo ou eu apenas avistei ele na rua</p>
                 <h5>14 Dias</h5>
-            </div>
+            </div>-->
         </div>
     </section>
 

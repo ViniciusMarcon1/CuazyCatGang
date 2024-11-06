@@ -24,6 +24,7 @@
                     }
             }
         </style>
+        <script defer src="js/lartemp.js"></script>
     </head>
 <body class="gradient-top">
     <header class="sticky-top" id="cabecalho">
@@ -104,32 +105,32 @@
                         <form id="form-voluntario-adm">
                             <div class="form-group">
                                 <label>Nome completo</label>
-                                <input type="email" class="form-control" id="full_name" aria-describedby="fullname" placeholder="- Nome Sobrenome -">
+                                <input type="text" name="fullname" class="form-control" id="full_name" aria-describedby="fullname" placeholder="- Nome Sobrenome -">
                             </div>
                             <div class="form-group">
                                 <label>Celular</label>
-                                <input type="number" class="form-control" id="celular" placeholder="- Seu celular -">
+                                <input type="text" name="cell_voluntario" class="form-control" id="celular" placeholder="- Seu celular -">
                             </div>
                             <div class="form-group">
                                 <label>Endereço</label>
-                                <input type="text" class="form-control" id="endereco" placeholder="- Seu endereço -">
+                                <input type="text"  name="endereco" class="form-control" id="endereco" placeholder="- Seu endereço -">
                             </div>
                             <div class="form-group">
                                 <label>CPF</label>
-                                <input type="number" class="form-control" id="celular" placeholder="- Seu CPF -">
+                                <input type="text" name="cpf" class="form-control" id="celular" placeholder="- Seu CPF -">
                                 </div>
                             <label>Gênero</label>
                             <div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="gender" id="radioMasculino" value="masculino">
+                                    <input class="form-check-input" type="radio" name="genero" id="radioMasculino" value="masculino">
                                     <label class="form-check-label" for="radioMasculino">Masculino</label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="gender" id="radioFeminino" value="feminino">
+                                    <input class="form-check-input" type="radio" name="genero" id="radioFeminino" value="feminino">
                                     <label class="form-check-label" for="radioFeminino">Feminino</label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="gender" id="radioOutro" value="outro">
+                                    <input class="form-check-input" type="radio" name="genero" id="radioOutro" value="outro">
                                     <label class="form-check-label" for="radioOutro">Outro</label>
                                 </div>
                             </div>
@@ -137,14 +138,14 @@
                             <div class="form-row mt-2">
                                 <div class="col">
                                     <label for="inputEstado">Possui: Caixa de areia, brinquedo, potes de água e comida</label>
-                                    <select id="inputEstado" class="form-control">
+                                    <select name="apto_adocao" id="inputEstado" class="form-control">
                                         <option>Sim</option>
                                         <option>Não</option>
                                     </select>
                                 </div>
                                 <div class="col">
                                     <label for="inputEstado">Tem outros pets?</label>
-                                    <select id="inputEstado" class="form-control">
+                                    <select name="outros_pets" id="inputEstado" class="form-control">
                                         <option>Sim</option>
                                         <option>Não</option>
                                     </select>
