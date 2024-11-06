@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <!-- Font Awesome - Ícones -->
+        <script src="https://kit.fontawesome.com/fe535cfee5.js" crossorigin="anonymous"></script>
+        <!-- Estilo customizado -->
+        <link rel="stylesheet" href="css/estilo.css">
+        <!-- Titulo -->
+        <title>Crazy Cat Gang</title>
+        <!-- Ícone do LINK - Aba do site -->
+        <link rel="icon" href="fotos/logo_redonda.png" type="fotos/png">
+        <!-- Js para comunicação com o servidor -->
+            <script defer src="js/conn.js"></script>
+        <style>
+            @media(min-width: 768px){
+                .linha_LP{
+                    border-bottom: 1px solid #343a40;
+                    }
+            }
+        </style>
+    </head>
+<body class="gradient-top">
+    <header class="sticky-top" id="cabecalho">
+        <div class="container-header container-f">
+                <div class=" header sticky-top">
+                    <nav class="" id="menu-navegacao">
+                        <div class="container-f">
+                            <a id="header-img" href="index.html">
+                                <img class="d-none d-lg-flex align-items-center" src="./fotos/logo_sf.png" alt="">
+                            </a>
+                            <ul class="container-f nav d-block d-md-flex">
+                                <li class=" fw-bold" >
+                                    <a class="nav-link " href="#about" id="link-about">
+                                        Quem Somos
+                                    </a>
+                                    <span id="span1"></span>
+                                </li>
+                                <li class=" fw-bold" >
+                                    <a class="nav-link " href="#how-help" id="link-how-help">
+                                        Como ajudar
+                                    </a>
+                                    <span id="span2"></span>
+                                </li>
+                                <li class="nav-item fw-bold">
+                                    <a class="nav-link " href="voluntario.html">
+                                        Lar Temporário
+                                    </a>
+                                    <span></span>
+                                </li>
+                                <li class="nav-item fw-bold">
+                                    <a class="nav-link dropdown-toggle" href="#" id="categoriasDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Categorias
+                                    </a>
+                                    <span></span>
+                                    <div class="dropdown-menu" aria-labelledby="categoriasDropdown">
+                                        <a class="dropdown-item" href="#">Adoção</a>
+                                        <a class="dropdown-item" href="#">Comportamento</a>
+                                        <a class="dropdown-item" href="#">Food</a>
+                                        <a class="dropdown-item" href="#">Indicação</a>
+                                        <a class="dropdown-item" href="#">Parceria</a>
+                                        <a class="dropdown-item" href="#">Resgate</a>
+                                        <a class="dropdown-item" href="#">Trabalho</a>
+                                    </div>
+                                </li>
+                                <li class="nav-item fw-bold">
+                                    <a class="nav-link " href="faq.html">
+                                        Perguntas Frequêntes
+                                    </a>
+                                    <span></span>
+                                </li>
+                                <li class="nav-item fw-bold">
+                                    <a class="nav-link " href="login.html">
+                                        Login
+                                    </a>
+                                    <span></span>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+                <div>
+                    <a href="forms.html">
+                        <button class="fw-bold botao" id="voluntario">
+                            Seja Voluntário <i class="fa-solid fa-cat"></i>
+                        </button>
+                    </a>
+                </div>
+        </div>
+    </header>
+    
+    <section class="container mb-5 mt-5 section">
+        <div class="form_main_card">
+                <div class="form_container">
+                    <div class="form_item_box">
+                        <h3 class="display-4 text-center">Pedidos de resgate <i class="fa-solid fa-cat"></i></h3>
+                    </div>
+                    <div class="form_item_box p-4">
+                        <form id="form-voluntario-adm">
+                            <div class="form-group">
+                                <label>Nome completo</label>
+                                <input type="email" class="form-control" id="full_name" aria-describedby="fullname" placeholder="- Nome Sobrenome -">
+                            </div>
+                            <div class="form-group">
+                                <label>Celular</label>
+                                <input type="number" class="form-control" id="celular" placeholder="- Seu celular -">
+                            </div>
+                            <div class="form-group">
+                                <label>Localização do gatinho</label>
+                                <input type="text" class="form-control" id="endereco" placeholder="- Endereço -">
+                            </div>
+
+                            <div class="form-group">
+                                <label>Caixa de Diálogo</label>
+                                <textarea type="" class="form-control" id="comentario" placeholder="- Deixe sua anotação para analizarmos aqui -"></textarea>
+                            </div>
+                            
+                            <div class="form-row mt-2">
+                                <div class="col">
+                                    <label for="inputEstado">O gato está em sua posse?</label>
+                                    <select id="inputEstado" class="form-control">
+                                        <option>Sim</option>
+                                        <option>Não</option>
+                                    </select>
+                                </div>
+                                <div class="col">
+                                    <label for="inputEstado">O gatinho possui ferimentos?</label>
+                                    <select id="inputEstado" class="form-control">
+                                        <option>Sim</option>
+                                        <option>Não</option>
+                                    </select>
+                                </div>
+                                </div>
+                            </form>
+                            <div class="form_item_box d-flex justify-content-end align-items-center mt-4 pt-2 pb-2">
+                            <button class="animated-button">
+                                <svg viewBox="0 0 24 24" class="arr-2" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                    d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
+                                    ></path>
+                                </svg>
+                                <span onclick="enviar()" class="text">Enviar</span>
+                                <span class="circle"></span>
+                                <svg viewBox="0 0 24 24" class="arr-1" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                    d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
+                                    ></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </section>
+
+    <section class="pedidos section">
+        <h1>Pedidos feitos</h1>
+        <div class="container-pedidos">
+            <div class="card">
+                <p><strong>Nome da Pessoa Aqui</strong></p>
+                <p>Aqui estou dizendo a situação que se encontra o gatinho e se ele esta comigo ou eu apenas avistei ele na rua</p>
+                <h5>14 Dias</h5>
+            </div>
+        </div>
+    </section>
+
+    <!-- Inicio do Footer - Rodapé -->
+    <footer class="pt-4 pb-4  bg-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-sm-12 d-flex align-items-center">
+                    <p>
+                        <a class="text-dark" href="index.html">Quem somos</a>
+                        <a class="text-dark ml-3" href="index.html">Como ajudar</a>
+                        <a class="text-dark ml-3" href="voluntario.html">Lar temporário</a>
+                        <a class="text-dark ml-3" href="#">Blog</a>
+                        <a class="text-dark ml-3" href="#">Perguntas Frequentes</a>
+                    </p>
+                </div>
+                <div class="col-md-4 d-flex justify-content-center">
+                    <a href="https://www.instagram.com/crazycatgang?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="btn btn-outline-dark ml-1">
+                        <i class="fa-brands fa-instagram fa-md"></i>
+                    </a>
+                    <a href="https://www.facebook.com/crazycatgang" class="btn btn-outline-dark ml-1">
+                        <i class="fa-brands fa-facebook fa-md"></i>
+                    </a>
+                    <a href="#" class="btn btn-outline-dark ml-1">
+                        <i class="fa-brands fa-whatsapp fa-md"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>    
+
+    <!-- JavaScript (Opcional) -->
+    <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+    <script src="js/app.js"></script>
+
+</body>
+</html>
