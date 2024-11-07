@@ -1,5 +1,5 @@
 <?php
-    include "resgate_conn.php";
+    include "conexao.php";
 
     $fullname = $_POST['fullname'];
     $cell_colaborador = $_POST['cell_colaborador'];
@@ -12,15 +12,5 @@
 
     mysqli_query($conn, $query1);
     mysqli_query($conn, $query2);
-
-
-
-
-
-
-
-
-
-
 
 ?>

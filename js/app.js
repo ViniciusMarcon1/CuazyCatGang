@@ -84,7 +84,7 @@ function verificarTamanhoDaJanela() {
                         </li>
                     </ul>
                     <!-- Botão Entrar -->
-                    <a href="forms.html">
+                    <a href="voluntario.html">
                         <button class="btn btn-outline-dark">
                             Seja voluntário <i class="fa-solid fa-cat"></i>
                         </button>
@@ -152,7 +152,7 @@ function verificarTamanhoDaJanela() {
                 </nav>
             </div>
             <div>
-                <a href="forms.html">
+                <a href="voluntario.html">
                     <button class="fw-bold botao" id="voluntario">
                         Seja Voluntário <i class="fa-solid fa-cat"></i>
                     </button>

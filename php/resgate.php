@@ -1,6 +1,6 @@
 <?php
 
-    include "resgate_conn.php";
+    include "conexao.php";
 
     $resultado = mysqli_query($conn, "SELECT 
                                         card.id_card,
@@ -30,7 +30,7 @@
     }
     else {
         $response["status"] = "n";
-        $response["mensagem"] = "block";
+        // $response["mensagem"] = "block";
     }
 
     echo json_encode($response);
